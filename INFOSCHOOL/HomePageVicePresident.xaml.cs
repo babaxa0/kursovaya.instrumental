@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace INFOSCHOOL
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для HomePageVicePresident.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class HomePageVicePresident : Window
     {
-        public MainWindow()
+        public HomePageVicePresident()
         {
             InitializeComponent();
         }
@@ -40,13 +39,6 @@ namespace INFOSCHOOL
             {
                 this.DragMove();
             }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            HomePageVicePresident homePageVicePresident = new HomePageVicePresident();
-            homePageVicePresident.Show();
-            this.Close();
         }
     }
 }
