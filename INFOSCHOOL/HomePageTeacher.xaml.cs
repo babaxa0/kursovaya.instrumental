@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace INFOSCHOOL
 {
     /// <summary>
-    /// Логика взаимодействия для AddTeacher.xaml
+    /// Логика взаимодействия для HomePageTeacher.xaml
     /// </summary>
-    public partial class AddTeacher : Window
+    public partial class HomePageTeacher : Window
     {
-        public AddTeacher()
+        public HomePageTeacher()
         {
             InitializeComponent();
         }
@@ -43,10 +43,12 @@ namespace INFOSCHOOL
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Учитель успешно добавлен к кружку!");
-            HomePageVicePresident homePageVicePresident = new HomePageVicePresident();
-            homePageVicePresident.Show();
-            this.Close();
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

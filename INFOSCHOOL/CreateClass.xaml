@@ -11,18 +11,18 @@
         <Style x:Key="TB" TargetType="TextBox">
             <Setter Property="Background" Value="#FF18222B"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Height" Value="35"/>
+            <Setter Property="Height" Value="50"/>
             <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontSize" Value="22"/>
             <Setter Property="BorderBrush" Value="#15299E"/>
-            <Setter Property="Padding" Value="7,10,0,0"/>
-            <Setter Property="Width" Value="200"/>
+            <Setter Property="Padding" Value="13,15,0,0"/>
+            <Setter Property="Width" Value="300"/>
             <Setter Property="FontFamily" Value="Britannic Bold"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="TextBox">
                         <Grid x:Name="root" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" SnapsToDevicePixels="True" VerticalAlignment="{TemplateBinding VerticalAlignment}">
-                            <Border x:Name="Background" BorderThickness="1" CornerRadius="15" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"/>
+                            <Border x:Name="Background" BorderThickness="1" CornerRadius="25" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"/>
                             <ScrollViewer x:Name="PART_ContentHost"
                                       BorderThickness="0"
                                       Padding="{TemplateBinding Padding}"
@@ -49,7 +49,7 @@
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="1" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}" CornerRadius="50" BorderBrush="#112385">
+                        <Border VerticalAlignment="Center" HorizontalAlignment="Center" BorderThickness="1" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}" CornerRadius="25" BorderBrush="#112385">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
 
@@ -60,9 +60,9 @@
                                 <Trigger.EnterActions>
                                     <BeginStoryboard>
                                         <Storyboard>
-                                            <DoubleAnimation To="410"  Storyboard.TargetProperty="Width" Duration="0:0:0.3" />
-                                            <DoubleAnimation To="105"  Storyboard.TargetProperty="Height" Duration="0:0:0.3" />
-                                            <ColorAnimation To="White" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" Duration="0:0:0.3"/>
+                                            <DoubleAnimation To="300"  Storyboard.TargetProperty="Width" Duration="0:0:0.3" />
+                                            <DoubleAnimation To="50"  Storyboard.TargetProperty="Height" Duration="0:0:0.3" />
+                                            <ColorAnimation To="#8EB0F4" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" Duration="0:0:0.3"/>
                                         </Storyboard>
                                     </BeginStoryboard>
                                 </Trigger.EnterActions>
@@ -70,9 +70,9 @@
                                 <Trigger.ExitActions>
                                     <BeginStoryboard>
                                         <Storyboard>
-                                            <DoubleAnimation To="400"  Storyboard.TargetProperty="Width" Duration="0:0:0.3" />
-                                            <DoubleAnimation To="100"  Storyboard.TargetProperty="Height" Duration="0:0:0.3" />
-                                            <ColorAnimation To="White" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" Duration="0:0:0.3"/>
+                                            <DoubleAnimation To="290"  Storyboard.TargetProperty="Width" Duration="0:0:0.3" />
+                                            <DoubleAnimation To="45"  Storyboard.TargetProperty="Height" Duration="0:0:0.3" />
+                                            <ColorAnimation To="#8EB0F4" Storyboard.TargetProperty="Background.(SolidColorBrush.Color)" Duration="0:0:0.3"/>
                                         </Storyboard>
                                     </BeginStoryboard>
                                 </Trigger.ExitActions>
@@ -95,32 +95,21 @@
 
         <Grid Height="470" Width="800" VerticalAlignment="Bottom" HorizontalAlignment="Center">
 
-            <TextBox x:Name="tb1" Style="{StaticResource TB}" Margin="31,0,19,0"/>
-<TextBlock IsHitTestVisible="False" FontSize="14" Width="200" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Логин" Grid.Row="2" Margin="40 15 0 0" Foreground="#A6A6A6" FontFamily="Britannic Bold">
-    <TextBlock.Style>
-        <Style TargetType="{x:Type TextBlock}">
-            <Setter Property="Visibility" Value="Collapsed"/>
-            <Style.Triggers>
-                <DataTrigger Binding="{Binding Text, ElementName=tb1}" Value="">
-                    <Setter Property="Visibility" Value="Visible"/>
-                </DataTrigger>
-            </Style.Triggers>
-        </Style>
-    </TextBlock.Style>
-</TextBlock>
-<TextBox x:Name="tb2" Style="{StaticResource TB}" Margin="31,290,19,0" VerticalAlignment="Top"/>
-<TextBlock IsHitTestVisible="False" FontSize="14" Width="200" Height="30" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Пароль" Grid.Row="2" Margin="40 130 0 0" Foreground="#A6A6A6" FontFamily="Britannic Bold">
-    <TextBlock.Style>
-        <Style TargetType="{x:Type TextBlock}">
-            <Setter Property="Visibility" Value="Collapsed"/>
-            <Style.Triggers>
-                <DataTrigger Binding="{Binding Text, ElementName=tb2}" Value="">
-                    <Setter Property="Visibility" Value="Visible"/>
-                </DataTrigger>
-            </Style.Triggers>
-        </Style>
-    </TextBlock.Style>
-</TextBlock>
+            <TextBox x:Name="tb1" Style="{StaticResource TB}" Margin="0 0 0 50"/>
+            <TextBlock IsHitTestVisible="False" FontSize="22" Width="200" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Название кружка" Grid.Row="2" Margin="0 0 70 40" Foreground="#A6A6A6" FontFamily="Britannic Bold">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=tb1}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+
+            <Button Style="{StaticResource btn1}" Content="Создать" FontWeight="Bold" FontSize="22"  Width="290" Height="45" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0 100 0 0" Background="#8EB0F4" Click="Button_Click"/>
 
         </Grid>
 

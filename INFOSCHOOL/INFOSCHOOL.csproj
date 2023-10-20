@@ -55,11 +55,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CheckClass.xaml.cs">
+      <DependentUpon>CheckClass.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddTeacher.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CheckClass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CreateClass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomePageTeacher.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -80,6 +91,9 @@
     </Compile>
     <Compile Include="CreateClass.xaml.cs">
       <DependentUpon>CreateClass.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomePageTeacher.xaml.cs">
+      <DependentUpon>HomePageTeacher.xaml</DependentUpon>
     </Compile>
     <Compile Include="HomePageVicePresident.xaml.cs">
       <DependentUpon>HomePageVicePresident.xaml</DependentUpon>

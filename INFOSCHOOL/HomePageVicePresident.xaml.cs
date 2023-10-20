@@ -40,5 +40,19 @@ namespace INFOSCHOOL
                 this.DragMove();
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            CreateClass createClass = new CreateClass();
+            createClass.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            AddTeacher addTeacher = new AddTeacher();
+            addTeacher.Show();
+            this.Close();
+        }
     }
 }

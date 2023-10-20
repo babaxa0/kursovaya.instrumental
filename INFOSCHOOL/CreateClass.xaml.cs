@@ -23,5 +23,37 @@ namespace INFOSCHOOL
         {
             InitializeComponent();
         }
+        private void ExitButt_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MinButt_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void Toolbar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (tb1.Text != "")
+            {
+                MessageBox.Show("Кружок успешно создан!");
+                HomePageVicePresident homePageVicePresident = new HomePageVicePresident();
+                homePageVicePresident.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Впишите название кружка.");
+            }
+        }
     }
 }
