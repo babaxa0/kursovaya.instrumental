@@ -43,12 +43,16 @@ namespace INFOSCHOOL
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            CheckClass checkClass = new CheckClass();
+            checkClass.Show();
+            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            AddStudents addStudents = new AddStudents();
+            addStudents.Show();
+            this.Close();
         }
     }
 }

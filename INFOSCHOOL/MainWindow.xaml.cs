@@ -44,9 +44,18 @@ namespace INFOSCHOOL
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            HomePageVicePresident homePageVicePresident = new HomePageVicePresident();
-            homePageVicePresident.Show();
-            this.Close();
+            if (tb1.Text == "1")
+            {
+                HomePageVicePresident homePageVicePresident = new HomePageVicePresident();
+                homePageVicePresident.Show();
+                this.Close();
+            }
+            if (tb1.Text == "2")
+            {
+                HomePageTeacher homePageTeacher = new HomePageTeacher();
+                homePageTeacher.Show();
+                this.Close();
+            }
         }
     }
 }

@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace INFOSCHOOL
 {
     /// <summary>
-    /// Логика взаимодействия для CheckClass.xaml
+    /// Логика взаимодействия для Students.xaml
     /// </summary>
-    public partial class CheckClass : Window
+    public partial class Students : Window
     {
-        public CheckClass()
+        public Students()
         {
             InitializeComponent();
         }
@@ -38,19 +38,6 @@ namespace INFOSCHOOL
             if (e.ChangedButton == MouseButton.Left)
             {
                 this.DragMove();
-            }
-        }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            if (tb1.Text != "")
-            {
-                Students students = new Students();
-                students.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Впишите название кружка.");
             }
         }
     }
